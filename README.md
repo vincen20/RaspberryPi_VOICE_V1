@@ -1,6 +1,12 @@
 # RaspberryPi_VOICE_V1
 基于百度语音的在线合成语音，整点播报语音系统，天气预报，网站新闻播报，提醒事项等
 
+
+首先应该安装百度语音API
+http://yuyin.baidu.com/sdk/down?appId=11242368
+
+
+
 crontab设置
 
 
