@@ -4,20 +4,16 @@ import os,datetime,time,subprocess,shlex
 from aip import AipSpeech
 import urllib.request ,sys
 import re
-""" 你的 APPID AK SK """
-APP_ID = '10714616'
-API_KEY = 'BDshdq4YRaUBQMU9QSgjvgIW'
-SECRET_KEY = '3dcc26a065b7b6a915c78b692bb89f9d'
+""" 你的百度语音 APPID AK SK """
+APP_ID = '107146??'
+API_KEY = 'BDshdq4QSg???????'
+SECRET_KEY = '3dcc26a??????????9d'
 client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)
 
 def get_weather():
-    #provice = input('输入省份名（请使用拼音）：')
-    #city = input('输入城市名（请使用拼音）：')
-    #获取天气的url
     #url = "http://qq.ip138.com/weather/"+provice+'/'+city+'_7tian.htm'
     url = "http://qq.ip138.com/weather/sichuan/FuShun.htm"
-       
-    
+        
     #获取页面信息
     weatherhtml = urllib.request.urlopen(url)
     res = weatherhtml.read().decode('GB2312')
@@ -53,7 +49,7 @@ def get_weather():
     if hours>=20:
         tm="富顺明天天气:" +weather[1]+','+weatx2+'天.'+"后天天气:" +weather[2]+','+weatx3+'天 .'
     if hours in (10,12,15,20):
-        tm=tm+"﻿﻿孩子他妈,喂娃儿维生素AD了吗,喂娃儿维生素AD了吗   ."
+        tm=tm+"﻿﻿今天学习了吗？   ."
     if mins==0:
         time_now="%s月%s日%s点整"%(cur.month,cur.day,cur.hour)
     else:
